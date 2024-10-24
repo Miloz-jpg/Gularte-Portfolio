@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+</head>
+
+<body>
+
+    <!-- Header con navegación -->
+    <header>
+        <nav>
+            <div class="miloz-firma">
+                <img src="img/miloz-firma.svg" alt="Logo de Miloz">
+            </div>
+            <ul class="menu">
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección del Formulario de Contacto -->
+    <section class="contact-form">
+        <div class="agendar">
+            <h2>Trabajemos juntxs!</h2>
+            <p>Para consultar o agendar una reunión podes contactarme por acá :)</p>
+        </div>
+    </section>
+    <section class="cuestionario">
+        <img src="img/img-contacto/ilus-manos.png" alt="chocalas" width="430px" height="460px">
+        <div>
+            <form action="#" method="post">
+                <div>
+                    <!-- Grupo de Nombre y Apellido -->
+                    <div class="input-group">
+                        <label for="nombre-apellido">Nombre y Apellido *</label>
+                        <input type="text" id="nombre-apellido" name="nombre-apellido" required>
+                    </div>
+
+                    <!-- Grupo de Teléfono -->
+                    <div class="input-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+
+                    <!-- Grupo de Email -->
+                    <div class="input-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <!-- Grupo de Asunto -->
+                    <div class="input-group">
+                        <label for="asunto">Asunto *</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+
+                    <!-- Grupo de Mensaje -->
+                    <div class="input-group">
+                        <label for="mensaje">Dejá tu mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="envio">
+                    <p class="required-fields">*Campos obligatorios</p>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="firma-derechos">
+                <img src="img/miloz-firma.svg" alt="Firma" class="firma">
+                <p>Todos los derechos reservados. Copyright © 2024 Miloz.</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.behance.net/milagrosgularte" target="_blank">
+                    <img src="img/behance-icon.png" alt="Behance Icon"></a>
+                <a href="https://www.instagram.com/miloz.jpg/" target="_blank">
+                    <img src="img/instagram-icon.png" alt="Instagram Icon"></a>
+                <a href="https://www.linkedin.com/in/milagros-gularte-017780228/" target="_blank">
+                    <img src="img/linkedin-icon.png" alt="LinkedIn Icon"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,456 @@
+@charset "utf-8";
+
+/* Estilos generales */
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+* {
+    font-family: "macho", sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+* h2 {
+    font-size: 36px;
+}
+
+* h3 {
+    font-size: 24px;
+}
+
+/* Cursor */
+body {
+    cursor: url(img/cursorpersonalizado.png), auto;
+}
+
+a {
+    cursor: url(img/cursorpersonalizado.png), auto;
+}
+
+/* Header */
+header {
+    background-color: #621244;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+ul.menu {
+    display: flex;
+    gap: 30px;
+}
+
+ul.menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #FFF2FC;
+    border-radius: 40px;
+    background: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+ul.menu li a:hover {
+    background: #F379AA;
+    color: #621244;
+}
+
+/* Estilos específicos para la página de inicio */
+body.home {
+    background: linear-gradient(180deg, #951C67 27.34%, #621244 73.85%);
+}
+
+#about {
+    color: #FFF2FC;
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+.about-content {
+    display: flex;
+    width: 1920px;
+    height: 515px;
+    padding: 60px 0px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.hola-ilus {
+    width: 650px;
+}
+
+#about p {
+    font-size: 24px;
+    max-width: 600px;
+    padding: inherit;
+}
+
+/*proyectos*/
+
+/*proyectos*/
+
+.mis-proyectos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    gap: 50px;
+    position: relative;
+}
+
+.proyectos-slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 300ms ease-out;
+}
+
+.slide img {
+    border-radius: 20px;
+}
+
+/* Para animar la transición del slider */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Para retrasar la animación */
+.proyectos-slider {
+    animation: slide 800ms ease-out;
+    animation-delay: 800ms;
+}
+
+
+.info-proyecto {
+    width: 657px;
+    height: 226px;
+}
+
+.info-proyecto h2 {
+    color: #FFF2FC;
+    margin-bottom: 10px;
+}
+
+.info-proyecto p {
+    color: #FFF2FC;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-ver-mas {
+    display: flex;
+    width: 117px;
+    height: 40px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    border: 1px solid #FFF2FC;
+    text-decoration: none;
+    color: #FFF2FC;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.btn-ver-mas:hover {
+    text-decoration: none;
+    border-radius: 40px;
+    background: #F379AA;
+    color: #621244;
+}
+
+/* Estilos generales inicio contacto */
+.contacto-inicio {
+    display: flex;
+    width: 1920px;
+    padding: 35px;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    background-color: #FFF2FC;
+}
+
+.contacto-content {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+
+.info-contacto {
+    flex: 1;
+    /* Toma el espacio disponible de forma proporcional */
+    text-align: left;
+    /* Alineación del texto a la izquierda */
+}
+
+.info-contacto h2 {
+    color: #621244;
+    font-weight: 700;
+}
+
+.info-contacto p {
+    color: #621244;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.contacto-img {
+    flex: 1;
+    position: relative;
+    /* Necesario para el hover */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto-img img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    /* Cambia el cursor a una mano para indicar que es clickeable */
+}
+
+.contacto-img img:hover {
+    transform: scale(1.05);
+    /* Aumenta ligeramente el tamaño al pasar el mouse */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    /* Añade una sombra sutil para resaltar */
+}
+
+footer {
+    background-color: #621244;
+    /* Color de fondo */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* Ocupa todo el ancho */
+    box-sizing: border-box;
+}
+
+.firma-derechos {
+    display: flex;
+    align-items: center;
+}
+
+.firma-derechos img.firma {
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+    /* Separación entre la firma y el texto */
+}
+
+.firma-derechos p {
+    font-size: 14px;
+    color: #FFF2FC
+        /* Color del texto */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+footer .footer-content {
+    max-width: 1830px;
+    /* Para ajustar el contenido */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+/*-------HTML SOBRE MI-------*/
+
+#sobre-mí {
+    display: flex;
+    background: linear-gradient(180deg, #621244 0%, #951C67 100%);
+    padding: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 75px;
+}
+
+.caja {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: #FFF2FC;
+    width: 600px;
+    font-size: 18px;
+}
+
+.hobbies {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hobbies-section {
+    display: flex;
+    gap: 30px;
+    align-items: baseline;
+}
+
+.hobbies-section p {
+    font-style: italic;
+    padding: 10px;
+}
+
+.hobby {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#educacion-personalidad {
+    display: flex;
+    padding: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 75px;
+    font-size: 18px;
+    background-image: url(img/img-sobre-mi/ilus-lapiz-milo.png);
+    background-repeat: no-repeat;
+    background-position: 37% bottom;
+}
+
+.columna {
+    color: #621244;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
+
+
+/*-------HTML CONTACTO-------*/
+
+.agendar {
+    background-image: url(img/img-contacto/textura-2.png);
+    background-repeat: no-repeat;
+    font-size: 18px;
+    font-weight: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    align-items: flex-start;
+    color: #FFF2FC;
+}
+
+.cuestionario {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    padding: 50px;
+    justify-content: center;
+    color: #621244;
+    font-family: Macho;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155.847%;
+    background-color: #FFF2FC;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    background: #FFF2FC;
+    box-shadow: 4px 4px 10px 0px rgba(150, 28, 103, 0.50);
+    padding: 50px;
+    align-items: flex-start;
+    gap: 46px;
+}
+
+input {
+    width: 329px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 2px solid #F379AA;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    font-size: 18px;
+    font-weight: 600;
+    color: #621244;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 3px solid #621244;
+    border-radius: 40px;
+    background-color: #FFF2FC;
+}
+
+button:hover {
+    text-decoration: none;
+    border-radius: 40px;
+    background: #F379AA;
+    color: #621244;
+}
+
+.envio {
+    display: flex;
+    gap: 75px;
+    align-items: center;
+}
+
+
+
