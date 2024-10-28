@@ -1,9 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Miloz.DG</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
+<body>
+    <header>
+        <nav>
+            <div class="miloz-firma">
+                <img src="img/miloz-firma.svg" alt="Logo de Miloz">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner-textura">
+        <div class="textura">
+            <h2>Mis trabajos destacados</h2>
+            <p>Mis proyectos</p>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <div class="galeria-grid">
+            <!-- Proyecto 1 -->
+            <div class="proyecto">
+                <div class="slider">
+                    <img id="slide-1" src="img/img-proyectos/proyecto-blink (1).png" alt="Proyecto 1" class="visible">
+                    <img id="slide-2" src="img/img-proyectos/proyecto-blink (2).png" alt="Proyecto 1" class="hidden">
+                    <img id="slide-3" src="img/img-proyectos/proyecto-blink (3).png" alt="Proyecto 1" class="hidden">
+                </div>
+                <div class="info-proyecto">
+                    <h3>Blink-182 Argentina</h3>
+                    <p>Diseño tipográfico + afiche <br> Proyecto colaboración</p>
+                    <p>Creado para representar la cultura argentina en base a las características estilísticas del fileteado porteño...</p>
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="proyecto">
+                <div class="slider">
+                    <img id="slide-4" src="img/img-proyectos/proyecto-lettering (1).png" alt="Proyecto 2">
+                    <img id="slide-5" src="img/img-proyectos/proyecto-lettering (2).png" alt="Proyecto 2">
+                    <img id="slide-6" src="img/img-proyectos/proyecto-lettering (3).png" alt="Proyecto 2">
+                </div>
+                <p>Proyecto 2 - Descripción breve</p>
+                <div class="slider-nav">
+                    <a href="#slide-4"></a>
+                    <a href="#slide-5"></a>
+                    <a href="#slide-6"></a>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="proyecto">
+                <div class="slider">
+                    <img id="slide-7" src="img/img-proyectos/proyecto-latas (1).png" alt="Proyecto 3">
+                    <img id="slide-8" src="img/img-proyectos/proyecto-latas (2).png" alt="Proyecto 3">
+                    <img id="slide-9" src="img/img-proyectos/proyecto-latas (3).png" alt="Proyecto 3">
+                </div>
+                <p>Proyecto 3 - Descripción breve</p>
+                <div class="slider-nav">
+                    <a href="#slide-7"></a>
+                    <a href="#slide-8"></a>
+                    <a href="#slide-9"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="firma-derechos">
+                <img src="img/miloz-firma.svg" alt="Firma" class="firma">
+                <p>Todos los derechos reservados. Copyright © 2024 Miloz.</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.behance.net/milagrosgularte" target="_blank"> <img src="img/behance-icon.png"></a>
+                <a href="https://www.instagram.com/miloz.jpg/" target="_blank"> <img src="img/instagram-icon.png"></a>
+                <a href="https://www.linkedin.com/in/milagros-gularte-017780228/" target="_blank"><img
+                        src="img/linkedin-icon.png"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="slider.js"></script>
+</body>
+
+
 </html>
