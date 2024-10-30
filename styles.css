@@ -328,6 +328,15 @@ footer {
 }
 
 
+footer .footer-content {
+    max-width: 1830px;
+    /* Para ajustar el contenido */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
 /*-------HTML SOBRE MI-------*/
 
