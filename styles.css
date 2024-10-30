@@ -19,6 +19,13 @@ html {
 
 * h3 {
     font-size: 24px;
+    color: #FFF2FC;
+}
+
+* h4 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFF2FC;
 }
 
 /* Cursor */
@@ -69,7 +76,7 @@ ul.menu li a:hover {
     color: #621244;
 }
 
-/* Estilos específicos para la página de inicio */
+/* INDEX */
 body.home {
     background: linear-gradient(180deg, #951C67 27.34%, #621244 73.85%);
 }
@@ -78,97 +85,124 @@ body.home {
     color: #FFF2FC;
     font-size: 30px;
     padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .about-content {
     display: flex;
-    width: 1920px;
-    height: 515px;
-    padding: 60px 0px;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 80px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 60px 0;
+    align-items: center;
+    gap: 75px;
 }
 
-.hola-ilus {
-    width: 650px;
+
+.about-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#about h1 {
+    font-size: 32px;
+    margin: 0 0 10px 0;
 }
 
 #about p {
     font-size: 24px;
-    max-width: 600px;
-    padding: inherit;
+    max-width: 500px; /* Ajusta para que se vea mejor en distintos tamaños de pantalla */
+    margin: 0;
 }
 
-/*proyectos*/
 
-/*proyectos*/
+/* Proyectos Index */
 
 .mis-proyectos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 40px;
-    border-radius: 20px;
-    gap: 50px;
-    position: relative;
 }
 
 .proyectos-slider {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
     position: relative;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    width: 300%; /* Ajustado al número de slides */
+    transition: transform 1.0s ease;
 }
 
 .slide {
+    display: flex;
+    align-items: center;
     min-width: 100%;
-    transition: transform 300ms ease-out;
+    gap: 90px;
+    padding: 30px;
 }
 
 .slide img {
-    border-radius: 20px;
+    width: 100vh;
 }
 
-/* Para animar la transición del slider */
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-
-    33% {
-        transform: translateX(-100%);
-    }
-
-    66% {
-        transform: translateX(-200%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
+.informacion-proyect {
+    max-width: 350px;
+    text-align: left;
+    color: #FFF2FC;
 }
 
-/* Para retrasar la animación */
-.proyectos-slider {
-    animation: slide 800ms ease-out;
-    animation-delay: 800ms;
+/* Oculta los inputs */
+input[type="radio"] {
+    display: none;
 }
 
-
-.info-proyecto {
-    width: 657px;
-    height: 226px;
+/* Lógica para mostrar cada slide */
+#slide1:checked ~ .slides {
+    transform: translateX(0);
 }
 
-.info-proyecto h2 {
+#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+/* Botones de navegación */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.nav-buttons label {
+    width: 20px;
+    height: 20px;
+    background-color: #F379AA;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#slide1:checked ~ .nav-buttons label[for="slide1"],
+#slide2:checked ~ .nav-buttons label[for="slide2"],
+#slide3:checked ~ .nav-buttons label[for="slide3"] {
+    background-color: #FFF2FC;
+}
+
+/* Estilos de Info del Proyecto */
+.informacion-proyect h2 {
     color: #FFF2FC;
     margin-bottom: 10px;
 }
 
-.info-proyecto p {
+.informacion-proyect p {
     color: #FFF2FC;
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 30px;
 }
 
@@ -189,13 +223,12 @@ body.home {
 }
 
 .btn-ver-mas:hover {
-    text-decoration: none;
-    border-radius: 40px;
     background: #F379AA;
     color: #621244;
 }
 
-/* Estilos generales inicio contacto */
+
+/* CONTACTO INDEX */
 .contacto-inicio {
     display: flex;
     width: 1920px;
@@ -233,23 +266,9 @@ body.home {
 .contacto-img {
     flex: 1;
     position: relative;
-    /* Necesario para el hover */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.contacto-img img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    /* Cambia el cursor a una mano para indicar que es clickeable */
-}
-
-.contacto-img img:hover {
-    transform: scale(1.05);
-    /* Aumenta ligeramente el tamaño al pasar el mouse */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    /* Añade una sombra sutil para resaltar */
 }
 
 footer {
@@ -382,95 +401,122 @@ footer .footer-content {
 }
 
 
+#spotify {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
 
+/*------- FIN -------*/
 
 
 /*-------HTML CONTACTO-------*/
 
-.agendar {
-    background-image: url(img/img-contacto/textura-2.png);
-    background-repeat: no-repeat;
-    font-size: 18px;
-    font-weight: 700px;
+.contact-section {
     display: flex;
-    flex-direction: column;
-    padding: 40px;
-    align-items: flex-start;
-    color: #FFF2FC;
-}
-
-.cuestionario {
-    display: flex;
-    gap: 80px;
     align-items: center;
-    padding: 50px;
-    justify-content: center;
-    color: #621244;
-    font-family: Macho;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 155.847%;
+    gap: 80px;
+    padding: 60px;
     background-color: #FFF2FC;
+    background-image: url(img/texture-banner.png);
+    background-size: cover;
+    background-position: center;
+    color: #FFF2FC;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
-form {
+.contact-form-container {
+    display: flex;
+    align-items: center;
+    /* gap: 80px; */
+    background-color: rgba(255, 242, 252, 0.9);
+    /* padding: 40px; */
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(150, 28, 103, 0.5);
+}
+
+.contact-img {
+    display: flex;
+}
+
+.contact-form {
     display: flex;
     flex-direction: column;
-    border-radius: 40px;
-    background: #FFF2FC;
-    box-shadow: 4px 4px 10px 0px rgba(150, 28, 103, 0.50);
     padding: 50px;
-    align-items: flex-start;
-    gap: 46px;
+    background: #FFF2FC;
+    border-radius: 40px;
+    max-width: 450px;
+    width: 100%;
 }
 
-input {
-    width: 329px;
-    height: 40px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    border: 2px solid #F379AA;
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-row {
+    display: flex;
+    gap: 50px;
 }
 
 .input-group {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    flex: 1;
+    /* Permite que los campos se distribuyan uniformemente */
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #F379AA;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #621244;
+    background-color: #FFF2FC;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.required-fields {
+    font-size: 14px;
+    color: #621244;
 }
 
 button {
     font-size: 18px;
     font-weight: 600;
     color: #621244;
-    display: flex;
-    justify-content: center;
-    padding: 10px 20px;
+    padding: 5px 25px;
     border: 3px solid #621244;
     border-radius: 40px;
     background-color: #FFF2FC;
+    cursor: pointer;
 }
 
 button:hover {
-    text-decoration: none;
-    border-radius: 40px;
     background: #F379AA;
-    color: #621244;
+    color: #FFF2FC;
 }
 
-.envio {
-    display: flex;
-    gap: 75px;
-    align-items: center;
-}
+/*------- FIN -------*/
 
 
 
 /*-------HTML PROYECTOS-------*/
-
-body {
-    background: linear-gradient(0deg, rgba(150, 28, 103, 0.70) 0%, rgba(150, 28, 103, 0.70) 100%), url(img/img-proyectos/texture.jpg) lightgray 50% / cover no-repeat;
-}
 
 .textura {
     background-image: url(img/img-contacto/textura-2.png);
@@ -486,32 +532,33 @@ body {
 
 
 /* Galería */
-
 .galeria {
     padding: 2rem;
+    background: linear-gradient(0deg, rgba(150, 28, 103, 0.70) 0%, rgba(150, 28, 103, 0.70) 100%), url(img/img-proyectos/texture.jpg) lightgray 50% / cover no-repeat;
 }
 
 .galeria-grid {
     display: flex;
     gap: 2rem;
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .proyecto {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas: una para el slider y otra para la info-proyecto */
+
+    display: flex;
+    padding-left: 70px;
     gap: 50px;
     align-items: center;
+    flex-direction: row;
 }
 
+
 .slider {
-    display: flex;
-    position: relative;
     max-width: 100%;
     overflow: hidden;
     border-radius: 15px;
-    flex-direction: column;
+    flex: 1;
 }
 
 .slider img {
@@ -531,7 +578,7 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #F379AA;
+    background-color: #FFF2FC;
     opacity: 0.40;
     transition: ease 250ms;
 }
@@ -550,10 +597,45 @@ body {
 
 .info-proyecto {
     width: 500px;
-    height: 300px;
+    height: 350px;
     padding: 20px;
     background: rgba(149, 28, 103, 0.80);
     border-radius: 15px;
     box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.25);
-    color: #FFF2FC;
+}
+
+.italic {
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <title>Formulario de Contacto</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
 </head>
 
@@ -24,56 +24,59 @@
             </ul>
         </nav>
     </header>
-
-    <!-- Sección del Formulario de Contacto -->
-    <section class="contact-form">
-        <div class="agendar">
-            <h2>Trabajemos juntxs!</h2>
+    <section class="banner-textura">
+        <div class="textura">
+            <h2>¿Trabajamos juntxs?</h2>
             <p>Para consultar o agendar una reunión podes contactarme por acá :)</p>
         </div>
     </section>
-    <section class="cuestionario">
-        <img src="img/img-contacto/ilus-manos.png" alt="chocalas" width="430px" height="460px">
-        <div>
-            <form action="#" method="post">
-                <div>
-                    <!-- Grupo de Nombre y Apellido -->
-                    <div class="input-group">
-                        <label for="nombre-apellido">Nombre y Apellido *</label>
-                        <input type="text" id="nombre-apellido" name="nombre-apellido" required>
-                    </div>
 
-                    <!-- Grupo de Teléfono -->
-                    <div class="input-group">
-                        <label for="telefono">Teléfono *</label>
-                        <input type="tel" id="telefono" name="telefono" required>
+    <!-- Sección del Formulario de Contacto -->
+    <section class="contact-section">
+        <img src="img/img-contacto/ilus-manos.png" alt="Imagen de contacto" class="contact-img">
+        <div class="contact-form-container">
+            <form action="#" class="contact-form">
+                <div class="form-fields">
+                    <!-- Primera fila: Nombre y Teléfono -->
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="name">Nombre y Apellido</label>
+                            <input type="text" id="name" name="name" placeholder="Nombre y Apellido*" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="text" id="phone" name="phone" placeholder="Teléfono*">
+                        </div>
                     </div>
-
-                    <!-- Grupo de Email -->
-                    <div class="input-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
+                    
+                    <!-- Segunda fila: Email y Asunto -->
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email*" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" placeholder="Asunto*">
+                        </div>
                     </div>
-
-                    <!-- Grupo de Asunto -->
+                    
+                    <!-- Tercer campo: Mensaje -->
                     <div class="input-group">
-                        <label for="asunto">Asunto *</label>
-                        <input type="text" id="asunto" name="asunto" required>
-                    </div>
-
-                    <!-- Grupo de Mensaje -->
-                    <div class="input-group">
-                        <label for="mensaje">Dejá tu mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
                     </div>
                 </div>
-                <div class="envio">
-                    <p class="required-fields">*Campos obligatorios</p>
+    
+                <!-- Footer del formulario: campos obligatorios y botón -->
+                <div class="form-footer">
+                    <p class="required-fields">* Campos obligatorios</p>
                     <button type="submit">Enviar</button>
                 </div>
             </form>
         </div>
     </section>
+    
 
     <footer>
         <div class="footer-content">

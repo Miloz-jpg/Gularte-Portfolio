@@ -33,30 +33,59 @@
 
         <section id="about" class="about">
             <div class="about-content">
-                <img src="img/img-index/ilustracion-hola.svg" alt="Hola ilustracion" class="hola-ilus">
-                <h1>Hola, soy Milo :)</h1>
-                <p>Orgullosamente de Argentina. Nómade, creativa, amo las texturas raras y las letras. ¡Te invito a conocerme!</p> 
+                <img src="img/img-index/hola-ilus.png"  width="685px" height="404px" alt="Hola ilustracion" class="hola-ilus">
+                <div class="about-index">
+                    <h1>Hola, soy Milo :)</h1>
+                    <p>Orgullosamente de Argentina. Nómade, creativa, amo las texturas raras y las letras. ¡Te invito a conocerme!</p> 
+                </div>
             </div>
         </section>
+        
 
         <section id="mis-proyectos" class="mis-proyectos">
             <div class="proyectos-slider">
-                <div class="slide">
-                    <img src="img/img-index/contenedor img-01.png" width="1000px" height="685px" alt="proyecto-lettering">
+                <!-- Radio buttons for navigation -->
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                
+                <!-- Slides with images and info -->
+                <div class="slides">
+                    <div class="slide">
+                        <img src="img/img-index/contenedor img-01.png" width="936px" height="646px" alt="proyecto-lettering">
+                        <div class="informacion-proyect">
+                            <h2>Mis proyectos</h2>
+                            <p>Explora mis trabajos recientes y la historia detrás de cada uno</p>
+                            <a href="proyectos.html" class="btn-ver-mas">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/img-index/contenedor img-02.png" width="936px" height="646px" alt="proyecto-afiche">
+                        <div class="informacion-proyect">
+                            <h2>Mis proyectos</h2>
+                            <p>Explora mis trabajos recientes y la historia detrás de cada uno</p>
+                            <a href="proyectos.html" class="btn-ver-mas">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/img-index/contenedor img-03.png" width="936px" height="646px" alt="proyecto-ilustración">
+                        <div class="informacion-proyect">
+                            <h2>Mis proyectos</h2>
+                            <p>Explora mis trabajos recientes y la historia detrás de cada uno</p>
+                            <a href="proyectos.html" class="btn-ver-mas">Ver más</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="img/img-index/contenedor img-02.png" width="1000px" height="685px" alt="proyecto-branding">
+                
+                <!-- Navigation labels -->
+                <div class="nav-buttons">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
                 </div>
-                <div class="slide">
-                    <img src="img/img-index/contenedor img-03.png img-01.png" width="1000px" height="685px" alt="proyecto-branding">
-                </div>
-            </div>
-            <div class="info-proyecto">
-                <h2>Mis proyectos</h2>
-                <p>Explora mis trabajos recientes y la historia detrás de cada uno</p>
-                <a href="proyectos.html" class="btn-ver-mas">Ver más</a>
             </div>
         </section>
+        
 
         <section id="contacto-inicio" class="contacto-inicio">
             <div class="contacto-content">
@@ -65,7 +94,8 @@
                     <p>Contame tus ideas y propuestas para que podamos darle vida. ¡No dudes en hablarme!</p>
                 </div>
                 <div class="contacto-img">
-                    <a href="contacto.html" target="_blank"> <img src="img/img-index/ilus-contacto-index.svg"></a>
+                    <img src="img/img-index/ilus-contacto-carta.svg">
+                    <a href="contacto.html" target="_blank"> <img src="img/img-index/lettering.svg"></a>
                 </div>
             </div>
         </section>
