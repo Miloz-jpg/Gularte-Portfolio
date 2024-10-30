@@ -13,8 +13,12 @@ html {
     margin: 0;
 }
 
-* h2 {
+* h1{
     font-size: 36px;
+}
+
+* h2 {
+    font-size: 32px;
 }
 
 * h3 {
@@ -77,6 +81,11 @@ ul.menu li a:hover {
 }
 
 /* INDEX */
+
+.ufo img{
+    width: 100%;
+}
+
 body.home {
     background: linear-gradient(180deg, #951C67 27.34%, #621244 73.85%);
 }
@@ -107,7 +116,7 @@ body.home {
 }
 
 #about h1 {
-    font-size: 32px;
+    font-size: 36px;
     margin: 0 0 10px 0;
 }
 
@@ -130,9 +139,9 @@ body.home {
 }
 
 .slides {
-    display: flex;
-    width: 300%; /* Ajustado al número de slides */
-    transition: transform 1.0s ease;
+        display: flex;
+        width: calc(100% * 3); /* Cambiar a un cálculo que dependa del número de slides */
+        transition: transform 1.0s ease;
 }
 
 .slide {
@@ -231,7 +240,7 @@ input[type="radio"] {
 /* CONTACTO INDEX */
 .contacto-inicio {
     display: flex;
-    width: 1920px;
+    width: 100%;
     padding: 35px;
     justify-content: center;
     align-items: center;
@@ -319,17 +328,6 @@ footer {
 }
 
 
-footer .footer-content {
-    max-width: 1830px;
-    /* Para ajustar el contenido */
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-
 
 /*-------HTML SOBRE MI-------*/
 
@@ -347,7 +345,7 @@ footer .footer-content {
     flex-direction: column;
     gap: 50px;
     color: #FFF2FC;
-    width: 600px;
+    width: 100vh;
     font-size: 18px;
 }
 
@@ -405,6 +403,11 @@ footer .footer-content {
     display: flex;
     justify-content: center;
     padding: 20px 0;
+}
+
+.box h4{
+    color: #621244;
+    font-weight: 600;
 }
 
 /*------- FIN -------*/
@@ -604,7 +607,13 @@ button:hover {
     box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
+.info-proyecto p{
+    color: #FFF2FC;
+
+}
+
 .italic {
+    margin-bottom:10px;
     font-size: 18px;
     font-style: italic;
 }
