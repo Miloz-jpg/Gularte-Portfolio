@@ -35,9 +35,8 @@
     <section class="contact-section">
         <img src="img/img-contacto/ilus-manos.png" alt="Imagen de contacto" class="contact-img">
         <div class="contact-form-container">
-            <form action="#" class="contact-form">
+            <form method="post" action="mailto:milagrosgularte99@gmail.com?subject=Email enviado desde Miloz Portfolio" enctype="text/plain">
                 <div class="form-fields">
-                    <!-- Primera fila: Nombre y Teléfono -->
                     <div class="input-row">
                         <div class="input-group">
                             <label for="name">Nombre y Apellido</label>
@@ -48,8 +47,6 @@
                             <input type="text" id="phone" name="phone" placeholder="Teléfono*">
                         </div>
                     </div>
-                    
-                    <!-- Segunda fila: Email y Asunto -->
                     <div class="input-row">
                         <div class="input-group">
                             <label for="email">Email</label>
@@ -60,8 +57,6 @@
                             <input type="text" id="subject" name="subject" placeholder="Asunto*">
                         </div>
                     </div>
-                    
-                    <!-- Tercer campo: Mensaje -->
                     <div class="input-group">
                         <label for="message">Mensaje</label>
                         <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>

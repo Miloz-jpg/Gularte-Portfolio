@@ -256,9 +256,7 @@ input[type="radio"] {
 
 .info-contacto {
     flex: 1;
-    /* Toma el espacio disponible de forma proporcional */
     text-align: left;
-    /* Alineación del texto a la izquierda */
 }
 
 .info-contacto h2 {
@@ -279,6 +277,37 @@ input[type="radio"] {
     justify-content: center;
     align-items: center;
 }
+
+.contacto-img img:first-child {
+    /* La ilustración de fondo */
+    position: relative;
+}
+
+.contacto-img a {
+    cursor: pointer;
+    bottom: 85px;
+    position: absolute;
+    z-index: 1; /* Se coloca encima de la ilustración */
+    animation: jello-horizontal 1.0s linear infinite; /* Repite la animación indefinidamente */
+}
+
+/* Animación de jello-horizontal */
+.jello-horizontal {
+    animation: jello-horizontal 0.9s linear both;
+}
+
+@keyframes jello-horizontal {
+    0% { transform: scale3d(1, 1, 1); }
+    30% { transform: scale3d(1.25, .75, 1); }
+    40% { transform: scale3d(.75, 1.25, 1); }
+    50% { transform: scale3d(1.15, .85, 1); }
+    65% { transform: scale3d(.95, 1.05, 1); }
+    75% { transform: scale3d(1.05, .95, 1); }
+    100% { transform: scale3d(1, 1, 1); }
+}
+
+
+/* FOOTER*/
 
 footer {
     background-color: #621244;
@@ -330,11 +359,17 @@ footer {
 
 footer .footer-content {
     max-width: 1830px;
-    /* Para ajustar el contenido */
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 600px){
+
+}
+
+
+
 
 
 
