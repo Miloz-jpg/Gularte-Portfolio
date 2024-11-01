@@ -13,7 +13,7 @@ html {
     margin: 0;
 }
 
-* h1{
+* h1 {
     font-size: 36px;
 }
 
@@ -32,9 +32,14 @@ html {
     color: #FFF2FC;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /* Cursor */
 body {
     cursor: url(img/cursorpersonalizado.png), auto;
+    overflow-x: hidden;
 }
 
 a {
@@ -82,10 +87,6 @@ ul.menu li a:hover {
 
 /* INDEX */
 
-.ufo img{
-    width: 100%;
-}
-
 body.home {
     background: linear-gradient(180deg, #951C67 27.34%, #621244 73.85%);
 }
@@ -122,9 +123,44 @@ body.home {
 
 #about p {
     font-size: 24px;
-    max-width: 500px; /* Ajusta para que se vea mejor en distintos tamaños de pantalla */
+    max-width: 500px;
     margin: 0;
 }
+
+/* Animación de rebote hacia arriba */
+.wobble-horizontal-top {
+    animation: wobble-horizontal-top 3.8s linear infinite;
+}
+
+@keyframes wobble-horizontal-top {
+
+    0%,
+    100% {
+        transform: translateX(0);
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        transform: translateX(-30px) rotate(6deg);
+    }
+
+    30% {
+        transform: translateX(15px) rotate(-6deg);
+    }
+
+    45% {
+        transform: translateX(-15px) rotate(3.6deg);
+    }
+
+    60% {
+        transform: translateX(9px) rotate(-2.4deg);
+    }
+
+    75% {
+        transform: translateX(-6px) rotate(1.2deg);
+    }
+}
+
 
 
 /* Proyectos Index */
@@ -134,14 +170,16 @@ body.home {
 }
 
 .proyectos-slider {
+    overflow: hidden;
     position: relative;
     width: 100%;
 }
 
 .slides {
-        display: flex;
-        width: calc(100% * 3); /* Cambiar a un cálculo que dependa del número de slides */
-        transition: transform 1.0s ease;
+    display: flex;
+    width: calc(100% * 3);
+    /* Cambiar a un cálculo que dependa del número de slides */
+    transition: transform 1.0s ease;
 }
 
 .slide {
@@ -153,7 +191,9 @@ body.home {
 }
 
 .slide img {
-    width: 100vh;
+    max-width: 100%;
+    /* Para asegurarte de que no se desborde */
+    height: auto;
 }
 
 .informacion-proyect {
@@ -168,15 +208,15 @@ input[type="radio"] {
 }
 
 /* Lógica para mostrar cada slide */
-#slide1:checked ~ .slides {
+#slide1:checked~.slides {
     transform: translateX(0);
 }
 
-#slide2:checked ~ .slides {
+#slide2:checked~.slides {
     transform: translateX(-100%);
 }
 
-#slide3:checked ~ .slides {
+#slide3:checked~.slides {
     transform: translateX(-200%);
 }
 
@@ -197,9 +237,9 @@ input[type="radio"] {
     transition: background-color 0.3s;
 }
 
-#slide1:checked ~ .nav-buttons label[for="slide1"],
-#slide2:checked ~ .nav-buttons label[for="slide2"],
-#slide3:checked ~ .nav-buttons label[for="slide3"] {
+#slide1:checked~.nav-buttons label[for="slide1"],
+#slide2:checked~.nav-buttons label[for="slide2"],
+#slide3:checked~.nav-buttons label[for="slide3"] {
     background-color: #FFF2FC;
 }
 
@@ -227,7 +267,7 @@ input[type="radio"] {
     text-decoration: none;
     color: #FFF2FC;
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -287,8 +327,9 @@ input[type="radio"] {
     cursor: pointer;
     bottom: 85px;
     position: absolute;
-    z-index: 1; /* Se coloca encima de la ilustración */
-    animation: jello-horizontal 1.0s linear infinite; /* Repite la animación indefinidamente */
+    z-index: 1;
+    animation: jello-horizontal 1.5s linear infinite;
+    /* Repite la animación indefinidamente */
 }
 
 /* Animación de jello-horizontal */
@@ -297,13 +338,33 @@ input[type="radio"] {
 }
 
 @keyframes jello-horizontal {
-    0% { transform: scale3d(1, 1, 1); }
-    30% { transform: scale3d(1.25, .75, 1); }
-    40% { transform: scale3d(.75, 1.25, 1); }
-    50% { transform: scale3d(1.15, .85, 1); }
-    65% { transform: scale3d(.95, 1.05, 1); }
-    75% { transform: scale3d(1.05, .95, 1); }
-    100% { transform: scale3d(1, 1, 1); }
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, .75, 1);
+    }
+
+    40% {
+        transform: scale3d(.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, .85, 1);
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 
@@ -363,11 +424,6 @@ footer .footer-content {
     display: flex;
     justify-content: space-between;
 }
-
-@media screen and (max-width: 600px){
-
-}
-
 
 
 
@@ -449,7 +505,7 @@ footer .footer-content {
     padding: 20px 0;
 }
 
-.box h4{
+.box h4 {
     color: #621244;
     font-weight: 600;
 }
@@ -476,15 +532,29 @@ footer .footer-content {
 .contact-form-container {
     display: flex;
     align-items: center;
-    /* gap: 80px; */
-    background-color: rgba(255, 242, 252, 0.9);
-    /* padding: 40px; */
+    background-color: #FFF2FC;
+    padding: 40px;
     border-radius: 20px;
-    box-shadow: 4px 4px 10px rgba(150, 28, 103, 0.5);
+    box-shadow: 4px 4px 10px #961c67;
+
 }
 
 .contact-img {
     display: flex;
+}
+
+.scale-up-center {
+    animation: scale-up-center 1.5s ease-in-out;
+}
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(.5)
+    }
+
+    100% {
+        transform: scale(1)
+    }
 }
 
 .contact-form {
@@ -612,26 +682,7 @@ button:hover {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
-
-.slider-nav {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 10px;
-}
-
-.slider-nav a {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #FFF2FC;
-    opacity: 0.40;
-    transition: ease 250ms;
-}
-
-.slider-nav a:hover {
-    opacity: 1;
+    cursor: pointer;
 }
 
 .hidden {
@@ -651,13 +702,13 @@ button:hover {
     box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
-.info-proyecto p{
+.info-proyecto p {
     color: #FFF2FC;
 
 }
 
 .italic {
-    margin-bottom:10px;
+    margin-bottom: 10px;
     font-size: 18px;
     font-style: italic;
 }

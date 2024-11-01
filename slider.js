@@ -64,3 +64,4 @@ nextBtn.addEventListener('click', (event) => {
 closeBtn.addEventListener('click', () => {
     lightbox.style.display = 'none';
 });
+
