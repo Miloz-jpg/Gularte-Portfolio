@@ -85,6 +85,61 @@ ul.menu li a:hover {
     color: #621244;
 }
 
+@media screen and (max-width: 600px) {
+
+    nav {
+        display: flex;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        flex-direction: column;
+        width: 100%;
+        font-size: 0.85em;
+    }
+
+    .bienvenidos-contenido {
+        text-align: center;
+    }
+
+    .ufo img {
+        width: 100%;
+        height: auto;
+    }
+
+    #about {
+        padding: 20px;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+
+    .about-index {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .about-index h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-index p {
+        font-size: 0.80rem;
+    }
+}
+
+
 /* INDEX */
 
 body.home {
